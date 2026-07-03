@@ -1,6 +1,6 @@
 {
   "name": "docker-auto-install",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "One-command Docker installation for Linux — detects your distro and installs Docker Engine, CLI, Compose, Buildx & Containerd with dignity.",
   "main": "bin/docker-auto-install.js",
   "bin": {

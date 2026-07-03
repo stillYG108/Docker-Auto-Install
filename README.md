@@ -142,6 +142,7 @@ docker-auto-install/
 ├── bin/
 │   └── docker-auto-install.js    ← Node.js CLI shim (npm / npx entry point)
 ├── package.json
+├── LICENSE
 └── README.md
 ```
 
@@ -154,20 +155,6 @@ docker-auto-install/
 | `curl \| bash` | `bash`, `curl` or `wget`, `sudo` or root |
 | `git clone` | `git`, `bash`, `sudo` or root |
 | `npx` / `npm` | Node.js ≥ 14, `bash`, `sudo` or root |
-
----
-
-## Maintaining This Package
-
-Docker occasionally updates repository URLs, GPG keys, and supported distributions. When that happens:
-
-1. Update `install.sh` (and sync the copy to `scripts/the_docker_installation.sh`) to match the [official Docker installation docs](https://docs.docker.com/engine/install/).
-2. Update `EXPECTED_FP` in `setup_repository()` if the GPG fingerprint changes.
-3. Bump the version in `package.json` and republish.
-
-**GitHub:** [github.com/stillYG108/Docker-Auto-Install](https://github.com/stillYG108/Docker-Auto-Install)
-
----
 
 ## License
 

@@ -4,7 +4,7 @@
   "description": "One-command Docker installation for Linux — detects your distro and installs Docker Engine, CLI, Compose, Buildx & Containerd with dignity.",
   "main": "bin/docker-auto-install.js",
   "bin": {
-    "docker-auto-install": "./bin/docker-auto-install.js"
+    "docker-auto-install": "bin/docker-auto-install.js"
   },
   "scripts": {
     "lint:sh": "shellcheck scripts/the_docker_installation.sh",
@@ -29,7 +29,7 @@
     "centos",
     "rhel"
   ],
-  "author": "YG Chaudhary",
+  "author": "yg108",
   "license": "MIT",
   "engines": {
     "node": ">=14.0.0"

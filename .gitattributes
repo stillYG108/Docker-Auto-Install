@@ -1,0 +1,10 @@
+# Default: auto line ending normalisation
+* text=auto
+
+# Shell scripts MUST use LF — CRLF will break them on Linux
+*.sh text eol=lf
+
+# JS and JSON normalise to LF
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf

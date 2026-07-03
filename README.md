@@ -22,19 +22,19 @@ The primary distribution method is a **plain bash script** — works on any fres
 ### Using `curl`
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/yugm-chaudhary/docker-auto-install/main/install.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/stillYG108/Docker-Auto-Install/main/install.sh | sudo bash
 ```
 
 ### Using `wget`
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/yugm-chaudhary/docker-auto-install/main/install.sh | sudo bash
+wget -qO- https://raw.githubusercontent.com/stillYG108/Docker-Auto-Install/main/install.sh | sudo bash
 ```
 
 ### Download and inspect first (recommended on production systems)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/yugm-chaudhary/docker-auto-install/main/install.sh -o install-docker.sh
+curl -fsSL https://raw.githubusercontent.com/stillYG108/Docker-Auto-Install/main/install.sh -o install-docker.sh
 # Review the script
 less install-docker.sh
 # Run it
@@ -44,8 +44,8 @@ sudo bash install-docker.sh
 ### Git clone
 
 ```bash
-git clone https://github.com/yugm-chaudhary/docker-auto-install
-cd docker-auto-install
+git clone https://github.com/stillYG108/Docker-Auto-Install
+cd Docker-Auto-Install
 sudo bash install.sh
 ```
 
@@ -163,8 +163,10 @@ Docker occasionally updates repository URLs, GPG keys, and supported distributio
 2. Update `EXPECTED_FP` in `setup_repository()` if the GPG fingerprint changes.
 3. Bump the version in `package.json` and republish.
 
+**GitHub:** [github.com/stillYG108/Docker-Auto-Install](https://github.com/stillYG108/Docker-Auto-Install)
+
 ---
 
 ## License
 
-MIT © yugm chaudhary
+MIT © [stillYG108](https://github.com/stillYG108)

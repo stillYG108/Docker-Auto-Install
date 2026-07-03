@@ -39,9 +39,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/yugm-chaudhary/docker-auto-install"
+    "url": "https://github.com/stillYG108/Docker-Auto-Install.git"
   },
   "bugs": {
-    "url": "https://github.com/yugm-chaudhary/docker-auto-install/issues"
+    "url": "https://github.com/stillYG108/Docker-Auto-Install/issues"
   }
 }

@@ -1,17 +1,15 @@
-# docker-auto-install
+```text
+████▄   ▄▄▄   ▄▄▄▄ ▄▄ ▄▄ ▄▄▄▄▄ ▄▄▄▄
+██  ██ ██▀██ ██▀▀▀ ██▄█▀ ██▄▄  ██▄█▄
+████▀  ▀███▀ ▀████ ██ ██ ██▄▄▄ ██ ██
 
-> **One-command Docker installation for Linux.**  
+▄████▄ ▄▄ ▄▄ ▄▄▄▄▄▄ ▄▄▄    ██ ▄▄  ▄▄  ▄▄▄▄ ▄▄▄▄▄▄ ▄▄▄  ▄▄    ▄▄    ▄▄▄▄▄ ▄▄▄▄  
+██▄▄██ ██ ██   ██  ██▀██   ██ ███▄██ ███▄▄   ██  ██▀██ ██    ██    ██▄▄  ██▄█▄ 
+██  ██ ▀███▀   ██  ▀███▀   ██ ██ ▀██ ▄▄██▀   ██  ██▀██ ██▄▄▄ ██▄▄▄ ██▄▄▄ ██ ██ 
+```
+
+> **One does not simply install Docker. One orchestrates it.**  
 > Detects your distro, installs Docker Engine, CLI, Compose, Buildx & Containerd — crafted with dignity.
-
-```
-  ╔══════════════════════════════════════════════════════╗
-  ║       T H E   D O C K E R   I N S T A L L E R      ║
-  ║       Multi-Distro  ·  Crafted with Dignity         ║
-  ║       Version 2.1  ·  Industry Best Practices       ║
-  ╚══════════════════════════════════════════════════════╝
-
-  One does not simply install Docker. One orchestrates it.
-```
 
 ---
 

@@ -1,0 +1,170 @@
+# docker-auto-install
+
+> **One-command Docker installation for Linux.**  
+> Detects your distro, installs Docker Engine, CLI, Compose, Buildx & Containerd — crafted with dignity.
+
+```
+  ╔══════════════════════════════════════════════════════╗
+  ║       T H E   D O C K E R   I N S T A L L E R      ║
+  ║       Multi-Distro  ·  Crafted with Dignity         ║
+  ║       Version 2.1  ·  Industry Best Practices       ║
+  ╚══════════════════════════════════════════════════════╝
+
+  One does not simply install Docker. One orchestrates it.
+```
+
+---
+
+## Quick Start — No Dependencies Required ⭐
+
+The primary distribution method is a **plain bash script** — works on any fresh Linux machine with zero prerequisites.
+
+### Using `curl`
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/yugm-chaudhary/docker-auto-install/main/install.sh | sudo bash
+```
+
+### Using `wget`
+
+```bash
+wget -qO- https://raw.githubusercontent.com/yugm-chaudhary/docker-auto-install/main/install.sh | sudo bash
+```
+
+### Download and inspect first (recommended on production systems)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/yugm-chaudhary/docker-auto-install/main/install.sh -o install-docker.sh
+# Review the script
+less install-docker.sh
+# Run it
+sudo bash install-docker.sh
+```
+
+### Git clone
+
+```bash
+git clone https://github.com/yugm-chaudhary/docker-auto-install
+cd docker-auto-install
+sudo bash install.sh
+```
+
+> **This method requires nothing but `bash` and `curl` (or `wget`) — ideal for fresh EC2 instances, VPSs, cloud VMs, Raspberry Pi, and any bare Linux server.**
+
+---
+
+## For Node.js Developers (npm / npx)
+
+If you're already in a Node.js environment, you can use the npm package instead:
+
+### One-shot via npx
+
+```bash
+npx docker-auto-install
+```
+
+### Global install
+
+```bash
+npm install -g docker-auto-install
+docker-auto-install
+```
+
+> **Note:** Requires Node.js ≥ 14. The npm package is a thin wrapper that invokes the same bash script under the hood.  
+> If Node.js isn't installed yet, use the `curl` method above — it's faster and has no prerequisites.
+
+---
+
+## Supported Distributions
+
+| Family | Distros |
+|--------|---------|
+| **Debian / Ubuntu** | Ubuntu, Debian, Linux Mint, Pop!\_OS, elementary OS, Kali Linux, Raspbian |
+| **RHEL / CentOS** | RHEL, CentOS, Rocky Linux, AlmaLinux, Oracle Linux |
+| **Fedora** | Fedora |
+| **Arch Linux** | Arch, Manjaro, EndeavourOS, Garuda |
+| **openSUSE / SLES** | openSUSE Leap, openSUSE Tumbleweed, SLES, SLED |
+| **Alpine Linux** | Alpine |
+
+---
+
+## What It Does
+
+```
+Pre-flight: verify internet connectivity
+Pre-flight: check if Docker is already installed (offer graceful exit)
+      │
+      ▼
+Detect Linux distribution  (/etc/os-release)
+      │
+      ▼
+Update package index & upgrade packages
+      │
+      ▼
+Remove old Docker relics  (docker.io, docker-engine, etc.)
+      │
+      ▼
+Install prerequisites  (curl, ca-certificates, gnupg, etc.)
+      │
+      ▼
+Add Docker's official repository
+   ├─ Downloads distro-correct GPG key
+   ├─ Verifies GPG fingerprint  (9DC8 5822 9FC7 DD38 …)
+   └─ Writes signed DEB822 / RPM / zypper source entry
+      │
+      ▼
+Install Docker Engine + CLI + Containerd + Buildx + Compose
+      │
+      ▼
+Start & enable Docker service  (systemd or OpenRC)
+      │
+      ▼
+Add invoking user to the docker group
+      │
+      ▼
+Run hello-world smoke test
+      │
+      ▼
+Print installation summary
+```
+
+---
+
+## Project Structure
+
+```
+docker-auto-install/
+├── install.sh                    ← PRIMARY: curl this on any fresh Linux machine
+├── scripts/
+│   └── the_docker_installation.sh  ← Bundled copy used by the npm package
+├── bin/
+│   └── docker-auto-install.js    ← Node.js CLI shim (npm / npx entry point)
+├── package.json
+└── README.md
+```
+
+---
+
+## Requirements
+
+| Method | Requirements |
+|--------|-------------|
+| `curl \| bash` | `bash`, `curl` or `wget`, `sudo` or root |
+| `git clone` | `git`, `bash`, `sudo` or root |
+| `npx` / `npm` | Node.js ≥ 14, `bash`, `sudo` or root |
+
+---
+
+## Maintaining This Package
+
+Docker occasionally updates repository URLs, GPG keys, and supported distributions. When that happens:
+
+1. Update `install.sh` (and sync the copy to `scripts/the_docker_installation.sh`) to match the [official Docker installation docs](https://docs.docker.com/engine/install/).
+2. Update `EXPECTED_FP` in `setup_repository()` if the GPG fingerprint changes.
+3. Bump the version in `package.json` and republish.
+
+---
+
+## License
+
+MIT © yugm chaudhary

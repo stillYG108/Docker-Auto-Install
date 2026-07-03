@@ -1,0 +1,20 @@
+# Files and directories to exclude from the npm tarball
+
+# Development / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Root-level shell scripts (the canonical npm copy lives in scripts/)
+install.sh
+
+# Misc
+*.log
+*.tmp
